@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Lambda function for report-service
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 20
+    MemorySize: 256
+
+Resources:
+  ReportServiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      ImageUri: "reportservicefunction:java11-maven-v1"
+      PackageType: "Image"
+      Role: arn:aws:iam::597624375289:role/report-service-lambda-role
+      Events:
+        CreateReport:
+          Type: Api
+          Properties:
+            Path: /v1/reports
+            Method: post
+        ReadReport:
+          Type: Api
+          Properties:
+            Path: /v1/reports/{id}
+            Method: get
+        DeleteReport:
+          Type: Api
+          Properties:
+            Path: /v1/reports/{id}
+            Method: delete
+        UpdateReport:
+          Type: Api
+          Properties:
+            Path: /v1/reports
+            Method: put
+    Metadata:
+      DockerTag: java11-maven-v1
+      DockerContext: ./ReportServiceFunction
+      Dockerfile: Dockerfile

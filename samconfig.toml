@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "report-service"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1f6ujubdt2vyk"
+s3_prefix = "report-service"
+region = "eu-west-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["ReportServiceFunction=597624375289.dkr.ecr.eu-west-1.amazonaws.com/report-service"]
