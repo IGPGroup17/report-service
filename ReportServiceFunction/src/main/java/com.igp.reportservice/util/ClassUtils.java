@@ -1,5 +1,6 @@
 package com.igp.reportservice.util;
 
+import com.igp.reportservice.util.path.InvalidTypeException;
 import lombok.experimental.UtilityClass;
 
 import java.util.HashMap;
@@ -30,7 +31,7 @@ public class ClassUtils {
         if (isAssignableFrom(object, clazz))
             return (T) object;
 
-        throw new com.igp.studentservice.util.path.InvalidTypeException(object, clazz);
+        throw new InvalidTypeException(object, clazz);
     }
 
     public boolean isAssignableFrom(Object object, Class<?> clazz) {

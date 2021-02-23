@@ -1,4 +1,4 @@
-package com.igp.studentservice.util.path;
+package com.igp.reportservice.util.path;
 
 /**
  * Basic exception that is thrown when you are unable to cast something to something else. Mainly used in

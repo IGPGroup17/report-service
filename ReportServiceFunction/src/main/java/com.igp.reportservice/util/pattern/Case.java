@@ -1,4 +1,4 @@
-package com.igp.studentservice.util.pattern;
+package com.igp.reportservice.util.pattern;
 
 import java.util.Objects;
 import java.util.Set;

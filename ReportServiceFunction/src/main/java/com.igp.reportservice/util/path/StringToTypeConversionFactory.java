@@ -1,5 +1,6 @@
-package com.igp.studentservice.util.path;
+package com.igp.reportservice.util.path;
 
+import com.igp.reportservice.util.path.InvalidTypeException;
 import lombok.experimental.UtilityClass;
 
 /**

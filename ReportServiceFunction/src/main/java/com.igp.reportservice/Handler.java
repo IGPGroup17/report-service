@@ -4,8 +4,8 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
-import com.igp.reportservice.service.ReportService;
-import com.igp.reportservice.service.ReportServiceImpl;
+import com.igp.reportservice.reports.ReportService;
+import com.igp.reportservice.reports.ReportServiceImpl;
 import com.igp.reportservice.util.EnvironmentLogger;
 import com.igp.reportservice.util.ResponseEntity;
 

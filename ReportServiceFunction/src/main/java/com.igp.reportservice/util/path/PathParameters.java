@@ -1,4 +1,4 @@
-package com.igp.studentservice.util.path;
+package com.igp.reportservice.util.path;
 
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import lombok.experimental.UtilityClass;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * PROBLEM: We need to identify get the shit {id} shit in the path for the URL. (eg. /students/{id} - the id bit).
+ * PROBLEM: We need to identify get the shit {id} shit in the path for the URL. (eg. /reports/{id} - the id bit).
  *
  * SOLUTION:
  *
@@ -15,7 +15,7 @@ import java.util.Objects;
  * {@link APIGatewayProxyRequestEvent#getPathParameters()}, which returns a Map<String, String> with the key being
  * the thing we call it, and the value being the value there.
  *
- * For example, if we have a path defined as /students/{id}, and when typing in the URL we type /students/1, the map
+ * For example, if we have a path defined as /reports/{id}, and when typing in the URL we type /reports/1, the map
  * will contain a single entry looking like this: id: "1". (Note that 1 is a string here).
  *
  * This class does a few things. Firstly, it ensures that something at this path actually exists (and throws an

@@ -1,4 +1,4 @@
-package com.igp.studentservice.util.pattern;
+package com.igp.reportservice.util.pattern;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -7,8 +7,8 @@ import java.util.function.Predicate;
 
 /**
  * PROBLEM: We wanna be more specific about the HTTP Request (ie. We want to check that the request is 1) going to the
- * correct path and 2, that its of a certain type of HTTP request. For example, /students/1. We need to check that it
- * follows the structure /students/{id} AND that it's a GET Request.
+ * correct path and 2, that its of a certain type of HTTP request. For example, /reports/1. We need to check that it
+ * follows the structure /reports/{id} AND that it's a GET Request.
  *
  * SOLUTION:
  * An extremely btec version of scala's pattern matching. I wanted to use scala itself but AWS wouldn't let me :(
